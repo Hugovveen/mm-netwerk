@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MMC Netwerk — Data Story</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0a0f2c; 
+            font-family: Arial, sans-serif;
+            color: white;
+            line-height: 1.6;
+        }
+ 
+        header {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 44px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 60px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .section {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 650px;
+            border: none;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 0 40px rgba(255,255,255,0.15);
+            border-radius: 12px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px;
+            opacity: 0.65;
+            font-size: 14px;
+        }
+
+        a {
+            color: #93C5FD;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>MMC Netwerk Visualisatie</h1>
+    <p>Een interactieve data story over de aanwezigen en hun netwerk.</p>
+</header>
+
+
+<div class="section">
+    <h2>Pie chart Brancheverdeling aanwezigen</h2>
+    <p>De pie chart laat zien dat een groot deel van de aanwezigen uit de overheids- 
+        en semipublieke sector komt. Dat verklaart 
+        meteen waarom thema’s als governance, organisatieontwikkeling en digitale transformatie zo sterk vertegenwoordigd 
+        zijn in de dataset. De rest van de groep bestaat uit consultants, IT-professionals en leiders uit onderwijs en zorg, wat samen een duidelijk beeld geeft van een netwerk dat vooral draait om maatschappelijke impact en publieke dienstverlening.</p>
+
+    <!-- eerste plot -->
+    <iframe src="plots/branch_pie_glow.html"></iframe>
+</div>
+
+
+<div class="section">
+    <h2>Clusterplot Vier typen professionals</h2>
+    <p>
+        Deze visualisatie toont hoe deelnemers uit verschillende domeinen 
+        (digitalisering, maatschappelijke impact, organisatieontwikkeling) samenkomen.  
+        Het model combineert TF-IDF, PCA en KMeans clustering om het landschap zichtbaar te maken.
+    </p>
+    <p>
+        De clustering van profielen splitst de aanwezigen op in vier duidelijke archetypen:
+
+0 – Menselijke Multitools / Creatief-Operationeel
+Mensen die soepel schakelen tussen inhoud, organisatie en creatief werk. Vaak bruggenbouwers en verbinders in projecten.
+
+1 – Interim Elite / Organisatorisch Leiderschap
+Sterke leiders die worden ingevlogen om verandering te leiden. Denkers én doeners met ervaring in complexe transities.
+
+2 – IT-Leiders & Architecten
+De technische ruggegraat van het netwerk. Mensen die digitale infrastructuren en strategieën ontwerpen, bouwen en bewaken.
+
+3 – Publieke Teamleiders & Trainers
+Professionals die teams begeleiden, coachen en naar een hoger niveau tillen. Vaak actief binnen onderwijs, gemeenten en maatschappelijke organisaties.
+
+Samen laten deze clusters zien dat het netwerk bestaat uit een mix van leiders, aanjagers en makers, met een sterke focus op publieke waarde.
+    </p>
+
+    <!-- tweede plot -->
+    <iframe src="plots/cluster_scatter.html"></iframe>
+</div>
+
+
+<div class="section">
+    <h2>Heatmap – Top 5 gezamenlijke thema-skills</h2>
+    <p>
+        In de heatmap vallen vijf thema’s direct op als verbindende factoren in het netwerk:
+
+Analytical skills
+Bijna iedereen werkt vanuit analyse, onderzoek of systeemdenken.
+
+Consultancy
+Advies, begeleiding en stakeholder-management spelen een centrale rol.
+
+ICT / Governance
+Digitale strategie, datamanagement en bestuurlijke kaders zijn belangrijk voor het hele netwerk.
+
+Project / Program / Change Management
+Verandertrajecten vormen de rode draad door veel van de profielen.
+
+Deze thema’s leggen bloot dat dit netwerk draait om denken, bouwen en veranderen – precies de drie assen waarop digitalisering het meeste impact maakt.
+    </p>
+
+    <!-- derde plot -->
+    <iframe src="plots/heatmap_new_groups.html"></iframe>
+</div>
+
+<div style="max-width:900px; margin:60px auto; padding:20px; color:white; opacity:0.85; font-size:16px; line-height:1.55;">
+    <h2 style="margin-bottom:15px;">Tot slot</h2>
+    <p>
+        Uit de analyse blijkt dat een groot deel van de aanwezigen afkomstig is uit de 
+        publieke sector. De clustering verdeelt het netwerk in vier duidelijke groepen:
+        Menselijke Multitools, Interim Elite, IT-Leiders en Publieke Teamleiders. 
+        De heatmap laat zien dat het netwerk wordt verbonden door een aantal gedeelde 
+        kernvaardigheden: analytisch denken, consultancy, ICT/governance en 
+        project- en verandermanagement. Samen schetsen deze inzichten een netwerk dat 
+        sterk gericht is op maatschappelijke waarde, digitale transformatie en 
+        organisatieontwikkeling.
+    </p>
+</div>
+
+<footer>
+    Gemaakt door Hugo · 
+    <a href="https://www.linkedin.com/in/hugo-van-veen-95411b27a" target="_blank">
+        LinkedIn
+    </a>
+</footer>
+
+</body>
+</html>
